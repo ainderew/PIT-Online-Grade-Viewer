@@ -1,0 +1,87 @@
+.main-container{
+  background: #799F0C;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ACBB78, #799F0C);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ACBB78, #799F0C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-container{
+  width: 80%;
+  height: 90%;
+  background: #9DB258;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* box-shadow:  10px 10px 20px #8da04f, 
+             -10px -10px 20px #adc461; */
+  
+}
+.left{
+  grid-column: 1/2;
+  width: 100%;
+  background: #A9B972;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:  6px 6px 12px #9dac6a, 
+             -6px -6px 12px #b5c67a;
+}
+.logo{
+  width: 50%;
+}
+.right{
+  background: white;
+
+}
+
+.login-form{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10rem;
+}
+.input-container{
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.input-field{
+  height: 2.5rem;
+  position: relative;
+  box-shadow: inset 6px 6px 7px #ededed, 
+            inset -6px -6px 7px #ffffff;
+  border: none;
+  background: #fff;
+  
+}
+.input-field.pass{
+  background: url(../../assets/lock.svg) no-repeat; 
+  background-position: 97%;
+  background-size: 1.5rem;
+  padding: 1rem;
+  
+}
+.input-container span{
+  position: absolute;
+  right: 0;
+  width: 3rem;
+}
+.submit-btn{
+  margin-top: 2rem;
+  height: 3.4rem;
+  background: #9DB258;
+  box-shadow:  6px 6px 12px #ededed, 
+             -6px -6px 12px #ffffff;
+  border: none;
+  border-radius: 2rem;
+  font-size: 1.3rem;
+  color: white;
+  
+}
