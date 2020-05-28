@@ -1,0 +1,9 @@
+.subMenu{
+    width: 100%;
+    /* height: 200%; */
+    position: absolute;
+    right: .2%;
+    top: 0;
+    transform: translateX(100%);
+    background: #222D31;
+}

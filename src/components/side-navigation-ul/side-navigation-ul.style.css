@@ -1,0 +1,33 @@
+.nav-ul{
+    width: 100%;
+    height: 100%;
+    background: #222D31;
+}
+.nav-ul li{
+    list-style: none;
+    padding: .5rem 2rem;
+    width: 100%;
+    position: relative;
+}
+
+.nav-ul li a{
+    text-decoration: none;
+    color: #BBBBBB;
+    font-size: .9rem;
+    font-weight: 600;
+}
+.nav-ul li::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid green;
+    width: 0%;
+    transition: 300ms;
+}
+.nav-ul li:hover{
+    background: #1A2225;
+}
+.nav-ul li:hover::before{
+    width: 100%;
+}

@@ -1,0 +1,31 @@
+.side-nav{
+    background: #222D31;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr .2fr 3fr .2fr 1fr;
+    color: #BBBBBB;
+}
+.sec{
+    padding: 0 2rem;
+}
+.sec-1,
+.sec-2,
+.sec-4{
+    display: flex;
+    align-items: center;
+    
+}
+.sec-1 h1{
+    font-size: 1.3rem;
+}
+.sec-2,
+.sec-4{
+    background: #1A2225;
+    height: 2rem;
+    color: #83979C;
+}
+.sec-2,
+.sec-4 p{
+    font-size: .8rem;
+    font-weight: 600;
+}
