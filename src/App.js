@@ -4,18 +4,32 @@ import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import {LoginPage} from "./components/Login-Page/login-page.component"
 import {LoggedInPage} from "./components/LoggedIn-Page/loggedin-page.component"
 
-function App() {
-  return (
-    <Router>
-    <div className="App">
-      <Switch>
-        <Route path="/" exact component={LoginPage}/>
-        <Route path="/loggedin" component={LoggedInPage}/>
-      </Switch>
+class App extends React.Component {
+  constructor(){
+    super();
+    this.state ={
+      redirect: "/loggedin",
+      userInfo : {},
+      test: "test"
+    }
+    
+  }
+  
 
-    </div>
-    </Router>
-  );
+  render() {
+    return (
+      <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/" exact component={LoginPage} />
+          <Route path="/loggedin" component={LoggedInPage}/>
+        </Switch>
+  
+      </div>
+      </Router>
+    )
+  }
+  
 }
 
 export default App;

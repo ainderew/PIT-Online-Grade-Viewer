@@ -1,9 +1,11 @@
 .side-nav{
-    background: #222D31;
+    background: #fff;
     height: 100vh;
     display: grid;
     grid-template-rows: 1fr .2fr 3fr .2fr 1fr;
-    color: #BBBBBB;
+    color: #717171;
+    box-shadow:  5px 5px 10px #e7e9eb, 
+             -5px -5px 10px #ffffff;
 }
 .sec{
     padding: 0 2rem;
@@ -20,9 +22,9 @@
 }
 .sec-2,
 .sec-4{
-    background: #1A2225;
+    background: #A9B972;
     height: 2rem;
-    color: #83979C;
+    color: #fff;
 }
 .sec-2,
 .sec-4 p{

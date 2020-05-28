@@ -1,11 +1,15 @@
 import React, {useState, useEffect} from "react"
 import "./login-page.style.css"
 import PitLogo from "../../assets/PitLogo.png"
+import UserLogo from "../../assets/user.svg"
+import {useHistory} from  "react-router-dom"
 
 
 export const LoginPage = () =>{
+    let history = useHistory();
+
     
-    const loginUser = async () =>{
+    const getUser = async () =>{
         const idNumber = document.getElementById("name-field")
         const password = document.getElementById("password-field");
         const request = {
@@ -21,10 +25,15 @@ export const LoginPage = () =>{
             body: JSON.stringify(request)
         })
         .then(response=>response.json())
-        .then(received => console.log(received))
-        
+        .then(received => {
+            if(received !=="no user"){
+              console.log("testing")
+              history.push("/loggedin")
+            }
+        })
     }
-    return(
+
+   return(
         <div className="main-container">
             <div className="login-container">
                 <div className="left">
@@ -32,7 +41,9 @@ export const LoginPage = () =>{
                 </div>
 
                 <div className="right">
-                    <form className="login-form" action="javascript:;" onSubmit={loginUser}>
+                    <img className="userLogo" src={UserLogo} alt="user logo"/>
+                    <h1 className="right-text">Log into your Account</h1>
+                    <form className="login-form" action="javascript:;" onSubmit={getUser} >
                         <div className="input-container">
                             <label htmlFor="idNumber">ID NUMBER </label>
                             <input id="name-field" className="input-field idNum" type="text" name="idNumber"/>

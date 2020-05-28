@@ -34,7 +34,8 @@
   width: 50%;
 }
 .right{
-  background: white;
+    position: relative;
+    background: white;
 
 }
 
@@ -44,7 +45,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 10rem;
+  padding: 8rem 8rem 0 8rem;
 }
 .input-container{
   display: flex;
@@ -59,13 +60,13 @@
             inset -6px -6px 7px #ffffff;
   border: none;
   background: #fff;
+  padding: 1rem;
   
 }
 .input-field.pass{
   background: url(../../assets/lock.svg) no-repeat; 
   background-position: 97%;
   background-size: 1.5rem;
-  padding: 1rem;
   
 }
 .input-container span{
@@ -83,5 +84,19 @@
   border-radius: 2rem;
   font-size: 1.3rem;
   color: white;
-  
+}
+
+.userLogo{
+    width: 4rem;
+    position: absolute;
+    top: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.right-text{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.4rem;
 }
