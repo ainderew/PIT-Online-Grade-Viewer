@@ -3,10 +3,13 @@ import "./login-page.style.css"
 import PitLogo from "../../assets/PitLogo.png"
 import UserLogo from "../../assets/user.svg"
 import {useHistory} from  "react-router-dom"
+import {useDispatch} from "react-redux"
+import {login} from "../../actions"
 
 
 export const LoginPage = () =>{
     let history = useHistory();
+    const dispatch = useDispatch();
 
     
     const getUser = async () =>{
@@ -26,9 +29,15 @@ export const LoginPage = () =>{
         })
         .then(response=>response.json())
         .then(received => {
-            if(received !=="no user"){
-              console.log("testing")
-              history.push("/loggedin")
+            if(received === "no user"){
+              console.log(received)
+            }
+            if (received === "wrong password"){
+                console.log(received)
+            }
+            if (typeof received === "object"){
+                dispatch(login(received))
+                history.push("/loggedin")
             }
         })
     }

@@ -11,7 +11,7 @@ export const SideNavUl = () =>{
         subMenuLi:
         [
             {
-                linkAddress: "/viewgrades",
+                linkAddress: "/loggedin/grades",
                 linkName: "View Grades"
                 
             },

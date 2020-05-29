@@ -1,0 +1,26 @@
+.loggedInPage{
+    display: grid;
+    grid-template-columns: 1fr 4fr; 
+    background: #FBFDFF;
+   }
+
+   .main-container-loggedinPage{
+       display: grid;
+       grid-template-rows: 1fr 4.3fr;
+
+   }
+
+   .upper-loggedinPage{
+       width: 100%;
+       position: relative;
+       
+   }
+   .upper-loggedinPage:before{
+       content: "";
+       position: absolute;
+       bottom: 0;
+       left: 50%;
+       transform: translate(-50%);
+       border-bottom: 1px solid rgb(212, 212, 212);
+       width: 70%;
+   }

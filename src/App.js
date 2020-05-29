@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import {LoginPage} from "./components/Login-Page/login-page.component"
-import {LoggedInPage} from "./components/LoggedIn-Page/loggedin-page.component"
+import {LoggedInPage} from "./components/LoggedIn-Page/Page/loggedin-page.component"
 
 class App extends React.Component {
   constructor(){

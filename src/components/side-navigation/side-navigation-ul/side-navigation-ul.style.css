@@ -26,9 +26,9 @@
     height: 0%;
     transition: 300ms;
 }
-.nav-ul li:hover{
+/* .nav-ul li:hover{
     background: #1A2225;
-}
+} */
 .nav-ul li:hover::before{
     height: 100%;
 }

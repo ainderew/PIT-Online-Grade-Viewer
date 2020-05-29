@@ -1,6 +1,6 @@
 import React from "react"
 import "./side-navigation.style.css"
-import {SideNavUl} from "../side-navigation-ul/side-navigation-ul.component"
+import {SideNavUl} from "./side-navigation-ul/side-navigation-ul.component"
 
 export const SideNavigation = () =>{
     
