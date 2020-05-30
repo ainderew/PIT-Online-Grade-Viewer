@@ -19,7 +19,7 @@ export const LoginPage = () =>{
             idNumber: idNumber.value,
             password: password.value
         }
-        const data = await fetch("http://localhost:3000/Login",{
+        const data = await fetch("https://online-grade-viewer-api.herokuapp.com/Login",{
             method: "POST",
             mode:"cors",
             headers: {
