@@ -1,0 +1,32 @@
+.notification-button-div{
+  position: relative;
+}
+.notification-button{
+
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 5px;
+  background: #FBFDFF;
+  box-shadow:  5px 5px 10px #eceef0, 
+             -5px -5px 10px #ffffff;
+  margin-right: 1rem;
+}
+
+.notification-button-icon{
+  width: 2rem;
+}
+
+.notification-active-indicator{
+  position: absolute;
+  top: 0%;
+  right: 0;
+  transform: translate(0%, -50%);
+  z-index: 2;
+  font-size: 1rem;
+  /* border: 1px solid rgb(211, 99, 99); */
+  padding: 0rem .6rem;
+  border-radius: 50%;
+  background: rgb(255, 121, 121);
+  color: white;
+}

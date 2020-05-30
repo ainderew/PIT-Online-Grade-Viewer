@@ -5,7 +5,7 @@ import {SideNavLi} from "../side-navigation-li/side-navigation-li.components"
 
 export const SideNavUl = () =>{
     const [linksData] = useState({
-        link1: "#link1",
+        link1: "/loggedin",
         linkName1: "Home",
         link1SubMenu: true,
         subMenuLi:

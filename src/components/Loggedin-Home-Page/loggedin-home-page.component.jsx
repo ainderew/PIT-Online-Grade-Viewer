@@ -3,6 +3,8 @@ import "./loggedin-home-page.style.css";
 
 export const LoggedInHomePage = () =>{
   return(
-    <h1>LOGGED IN HOMEPAGE</h1>
+    <div className="loggedin-home-page">
+      
+    </div>
   )
 }

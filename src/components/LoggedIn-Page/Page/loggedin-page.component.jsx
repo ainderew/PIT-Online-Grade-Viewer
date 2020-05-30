@@ -3,8 +3,9 @@ import "./loggedin-page.style.css"
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import {SideNavigation} from "../../side-navigation/side-navigation.component"
 import {UserHeader} from "../user-header/user-header.component"
-import {ViewGradesPage} from "../../View-Grades-Page/view-grades-page.component"
+import {ViewGradesPage} from "../../View-Grades-Page/Page/view-grades-page.component"
 import {LoggedInHomePage} from "../../Loggedin-Home-Page/loggedin-home-page.component"
+
 
 export const LoggedInPage = () =>{
     return(

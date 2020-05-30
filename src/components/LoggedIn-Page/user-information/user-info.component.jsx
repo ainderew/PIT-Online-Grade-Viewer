@@ -7,6 +7,7 @@ export const UserInfo = (props) =>{
     let output
     userId = props.userData.idNumber.split("")
     userId.splice(2,0,"-");
+    userId.splice(6,0,"-");
     output = userId.join("")
     console.log(output)
     return output;
@@ -17,7 +18,7 @@ export const UserInfo = (props) =>{
       <h2>Welcome</h2>
       <h1 className="user-info-text">{props.userData.name}</h1>
       <h1 className="user-info-text">{props.userData.course} {props.userData.yearLevel}</h1>
-      {/* <h1 className="user-info-text">{idFormat()}</h1> */}
+      <h1 className="user-info-text">{idFormat()}</h1>
     </div>
   )
 }

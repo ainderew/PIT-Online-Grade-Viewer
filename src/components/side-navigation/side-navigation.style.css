@@ -6,6 +6,8 @@
     color: #717171;
     box-shadow:  5px 5px 10px #e7e9eb, 
              -5px -5px 10px #ffffff;
+    position: sticky;
+    top: 0;
 }
 .sec{
     padding: 0 2rem;

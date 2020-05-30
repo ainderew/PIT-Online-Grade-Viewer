@@ -1,0 +1,71 @@
+.grade-container-div{
+  width: 50vw;
+  height: 60vh;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-rows: .5fr 3fr .5fr;
+  /* border-radius: 41px; */
+  background: #FBFDFF;
+  box-shadow:  5px 5px 19px #e9ebed, 
+             -5px -5px 19px #ffffff;
+  padding: 0 3rem;
+  margin-top: 3rem;
+}
+
+.grade-container-header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgb(155, 155, 155);
+}
+  
+.grade-container-body,
+.grade-container-total{
+  display: grid;
+  grid-template-columns: 2.5fr 1fr;
+}
+.grade-container-total{
+  border-top: 1px solid rgb(155, 155, 155);
+}
+.grade-container-left,
+.grade-container-right{
+  display: grid;
+  grid-auto-rows: 2.5rem;
+}
+.grade-total-column{
+  grid-column: 2/3;
+}
+.grade-total-row{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+}
+.grade-left-subject-header,
+.grade-left-subject-information{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid rgb(221, 221, 221);
+  
+}
+
+.grade-header-right{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 1px solid rgb(221, 221, 221);
+
+}
+.grade-container-semester-text{
+  font-size: 1.1rem;
+}
+.grade-container-header-text{
+  font-size: .9rem;
+}
+.grade-container-main-text{
+  font-size: .8rem;
+  font-weight: 400;
+}
+.grade-container-row{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
