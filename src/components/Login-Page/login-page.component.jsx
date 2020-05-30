@@ -43,13 +43,15 @@ export const LoginPage = () =>{
     }
 
    return(
-        <div className="main-container">
+        <div className="login-main-page">
             <div className="login-container">
-                <div className="left">
-                    <img className="logo" src={PitLogo} alt=""/>
+                <div className="login-container-left">
+                    <h1 className="logo-text">PIT <span className="logo-text-span">Online</span></h1>
+                    <h1 className="logo-subtext"><span className="logo-text-span">Grades</span> and Enrollment Online</h1>
+                    <img className="logo" src={PitLogo} alt=""/> 
                 </div>
 
-                <div className="right">
+                <div className="login-container-right">
                     <img className="userLogo" src={UserLogo} alt="user logo"/>
                     <h1 className="right-text">Log into your Account</h1>
                     <form className="login-form" action="javascript:;" onSubmit={getUser} >
