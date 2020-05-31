@@ -33,27 +33,32 @@
 
   position: relative;
 }
-.logo-text{
-  color: #A9B972;
-  font-weight: 900;
-  font-size: 5rem;
-  position: absolute;
-  /* left: 10%; */
-  top: 5%;
-  text-shadow:  2px 2px 2px #909d61,   -8px -8px 12px #c2d58377;
-}
+.logo-text,
 .logo-subtext{
   color: #A9B972;
   font-weight: 900;
+}
+.logo-text{
+  font-size: 5rem;
+  position: absolute;
+  top: 5%;
+  text-shadow:  2px 2px 2px #909d61,   
+               -2px -2px 2px #c2d58377;
+}
+.logo-subtext{
   font-size: 1.2rem;
   position: absolute;
   top: 20%;
-  text-shadow: 2px 2px 1px #909d61,  -6px -6px 10px #c2d583;
+  text-shadow: 2px 2px 1px #909d61,  -0px -0px 1px #c2d583;
 }
 .logo-text-span{
   /* color: #7CA012; */
   /* color: white; */
   font-weight: 900;
+}
+.logo-text-lower{
+  font-size: 2rem;
+  top: 80%;
 }
 .logo{
   width: 45%;
@@ -71,6 +76,7 @@
   flex-direction: column;
   justify-content: center;
   padding: 8rem 8rem 0 8rem;
+  position: relative;
 }
 .input-container{
   display: flex;
@@ -94,11 +100,7 @@
   background-size: 1.5rem;
   
 }
-.input-container span{
-  position: absolute;
-  right: 0;
-  width: 3rem;
-}
+
 .submit-btn{
   margin-top: 2rem;
   height: 3.4rem;
@@ -109,7 +111,9 @@
   border-radius: 2rem;
   font-size: 1.3rem;
   color: white;
+  outline: none;
 }
+
 
 .userLogo{
     width: 4rem;
@@ -124,4 +128,80 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: 1.4rem;
+}
+
+.errorIndicator-text{
+  font-size: 1rem;
+  text-align: center;
+  color: red;
+}
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  position: relative;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #7BA011 transparent #7BA011 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+  position: absolute;
+  left: 200%;
+  /* transform:translateX(-0%); */
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media only screen and (max-width: 1600px){
+  .logo-text{
+    font-size: 4rem;
+  }
+  .logo-subtext{
+    font-size: 1rem;
+  }
+  .logo-text-lower{
+    font-size: 1.5rem;
+  }
+  .login-form{
+    padding: 8rem 6rem 0 6rem;
+  }
+  .input-field{
+    height: 1rem;
+  }
+  .right-text{
+    font-size: 1rem;
+  }
+  .userLogo{
+    width: 3rem;
+    top: 15%;
+  }
+  .login-label-text{
+    font-size: .8rem;
+  }
+  .input-field.pass{
+    background-size: 1rem;
+  }
+  .submit-btn{
+    height: 2.3rem;
+    font-size: 1.1rem;
+  }
+  .lds-dual-ring:after{
+    left: 170%;
+    height: 3rem;
+    width: 3rem;
+    border: 3px solid #fff;
+    border-color: #7BA011 transparent #7BA011 transparent;
+  }
 }

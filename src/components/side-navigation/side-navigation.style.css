@@ -19,9 +19,7 @@
     align-items: center;
     
 }
-.sec-1 h1{
-    font-size: 1.3rem;
-}
+
 .sec-2,
 .sec-4{
     background: #A9B972;
@@ -32,4 +30,36 @@
 .sec-4 p{
     font-size: .8rem;
     font-weight: 600;
+}
+
+.sidenav-pit-logo{
+    width: 4rem;
+    margin-right: 2rem;
+}
+.sidenav-pit-logo-text{
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 1600px){
+    
+    .sec-2,
+    .sec-4 p{
+        font-size: .7rem;
+        font-weight: 600;
+    }
+    .sec-2,
+    .sec-4{
+        height: 1.6rem;
+    }
+    .sidenav-pit-logo-text{
+        font-size: .8rem;
+    }
+    .sidenav-pit-logo{
+        width: 3rem;
+        margin-right: 1rem;
+    }
+    .sec{
+        padding: 0 1.5rem;
+    }
+    
 }

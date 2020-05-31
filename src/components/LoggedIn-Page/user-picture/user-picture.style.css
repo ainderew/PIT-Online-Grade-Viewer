@@ -2,3 +2,8 @@
   width: 4rem;
   height: 4rem;
 }
+@media only screen and (max-width: 1400px){
+  .userPhoto-component{
+    width: 3rem;
+  }
+}

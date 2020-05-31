@@ -1,0 +1,33 @@
+.notificationExpanded{
+    background: #A9B972;
+    color: white;
+    position: absolute;
+    left: 0%;
+    top: 50%;
+    transform: translateX(-100%);
+    display: none;
+    width: 17rem;
+    min-height: 10rem;
+    box-shadow:  34px 34px 45px #ebebeb, 
+             -34px -34px 45px #ffffff;
+    
+}
+
+
+.notificationExpanded-LI{
+    list-style-type: none;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    padding: 0 0 0 2rem;
+    border-bottom: 1px solid white;
+}
+
+.notif-header-li{
+    justify-content: center;
+    padding: 0;
+}
+
+.notificationExpanded-text{
+    font-size: 1rem;
+}

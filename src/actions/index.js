@@ -4,3 +4,9 @@ export const login = (userInfo) =>{
     userInfo: userInfo
   }
 }
+
+export const isLoading = () =>{
+  return{
+    type: "loading"
+  }
+}

@@ -23,9 +23,9 @@ export const UserHeader = () =>{
       <div className="right-user-header">
         
        
-        <NotificationButton icon={NotificationSVG} accessibility="notification" notification={userInfo.notification}/>
-        <NotificationButton icon={AlertSVG} accessibility="alert" notification={userInfo.alert} />
-        <NotificationButton icon={MessageSVG} accessibility="message" notification={userInfo.message}/>
+        <NotificationButton icon={NotificationSVG} accessibility="notification" notificationType="Notifications" notificationIndicator={userInfo.notificationNumber} notificationList={userInfo.notificationList}/>
+        <NotificationButton icon={AlertSVG} accessibility="alert" notificationType="Alerts" notificationIndicator={userInfo.alertNumber} notificationList={userInfo.alertList} />
+        <NotificationButton icon={MessageSVG} accessibility="message" notificationType="Messages" notificationIndicator={userInfo.messageNumber} notificationList={userInfo.messageList} />
         
       </div>
     </div>
