@@ -6,26 +6,26 @@
     align-items: center;
     justify-content: flex-start;
     background: #A9B972;
-    box-shadow:  31px 31px 62px #909d61, 
-             -31px -31px 62px #c2d583;
+    box-shadow:  5px 5px 10px #909d61, 
+             -5px -5px 10px #c2d583;
     position: relative;
 }
 
 .error-module-logo{
     width: 15rem;
-    margin: 3rem 0 2rem 0;
+    margin: 3rem 0 5rem 0;
    
 }
 
 .error-module-text{
     color: white;
-    font-size: 2rem;
+    font-size: 3rem;
     text-align: center;
 }
 .error-module-button{
     border: none;
-    width: 15rem;
-    height: 3rem;
+    width: 20rem;
+    height: 4rem;
     border-radius: 2rem;
     box-shadow:  34px 34px 68px #808d57, 
              -34px -34px 68px #d2e58d;
@@ -35,11 +35,11 @@
     bottom: 13%;
 }
 .error-module-button:hover{
-    width: 16rem;
-    height: 3.1rem;
+    width: 22rem;
+    height: 4.2rem;
 }
 .error-module-button:hover .error-module-button-text{
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 .error-module-button-text{
     color: #A9B972;

@@ -8,8 +8,13 @@ import {login} from "../../actions"
 
 
 export const LoginPage = () =>{
-    let history = useHistory();
+    const history = useHistory();
     const dispatch = useDispatch();
+    const [button,setButton] = useState(<button className="submit-btn" type="submit">Log-in</button>)
+    const [loginErrorIndicator,setIndicator] =useState("")
+    const [idNumberValue,setIdNumberValue] = useState("")
+    const [passwordValue,setPasswordValue] = useState("")
+
 
     useEffect(() =>{
         sessionStorage.removeItem("state")
@@ -17,7 +22,8 @@ export const LoginPage = () =>{
     
 
     
-    const getUser = async () =>{
+    const getUser = async (event) =>{
+        event.preventDefault()
         changeToLoader()
         const request = {
             idNumber: idNumberValue,
@@ -34,11 +40,11 @@ export const LoginPage = () =>{
         .then(response=>response.json())
         .then(received => {
             if(received === "no user"){
-              setValue(<button className="submit-btn" type="submit">Log-in</button>)
+              setButton(<button className="submit-btn" type="submit">Log-in</button>)
               setIndicator(<h1 className="errorIndicator-text">Invalid Id Number</h1>)
             }
             if (received === "wrong password"){
-                setValue(<button className="submit-btn" type="submit">Log-in</button>)
+                setButton(<button className="submit-btn" type="submit">Log-in</button>)
                 setIndicator(<h1 className="errorIndicator-text">Wrong Password</h1>)
             }
             if (typeof received === "object"){
@@ -48,14 +54,7 @@ export const LoginPage = () =>{
         })
     }
 
-    const changeToLoader = () =>{
-        setValue(<div className="lds-dual-ring"></div>)
-    }
-    const [value,setValue] = useState(<button className="submit-btn" type="submit">Log-in</button>)
-
-    const [loginErrorIndicator,setIndicator] =useState("")
-    const [idNumberValue,setIdNumberValue] = useState("")
-    const [passwordValue,setPasswordValue] = useState("")
+   
 
     const onChangeIdNumber = (event) =>{
         setIdNumberValue( event.target.value )
@@ -64,6 +63,9 @@ export const LoginPage = () =>{
         setPasswordValue(event.target.value)
     }
 
+    const changeToLoader = () =>{
+        setButton(<div className="lds-dual-ring"></div>)
+    }
 
    return(
         <div className="login-main-page">
@@ -78,7 +80,7 @@ export const LoginPage = () =>{
                 <div className="login-container-right">
                     <img className="userLogo" src={UserLogo} alt="user logo"/>
                     <h1 className="right-text">Log into your Account</h1>
-                    <form className="login-form" action="javascript:;" onSubmit={getUser} >
+                    <form className="login-form" onSubmit={getUser} >
                         <div className="input-container">
                             <label className="login-label-text" htmlFor="idNumber">ID NUMBER </label>
                             <input className="input-field idNum" type="text" required={true} name="idNumber" value={idNumberValue} onChange={onChangeIdNumber}/>
@@ -88,7 +90,7 @@ export const LoginPage = () =>{
                             <input className="input-field pass" type="password" required={true} name="password" value={passwordValue} onChange={onChangePassword} />
                         </div>
                         {loginErrorIndicator}
-                        {value}
+                        {button}
                         
                     </form>
                 </div>
