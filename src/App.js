@@ -5,6 +5,7 @@ import {LoginPage} from "./components/Login-Page/login-page.component"
 import {LoggedInPage} from "./components/LoggedIn-Page/Page/loggedin-page.component"
 import {ReloginPage} from "./components/Error-Pages/Relogin-Page/relogin-page.component"
 import {AdminLoginPage} from "./components/Admin-Login-Page/admin-login-page.component"
+import {TeacherLoggedInPage} from "./components/Teacher-loggedin-Page/Page/teacher-loggedin-page.component"
 
 class App extends React.Component {
   constructor(){
@@ -26,6 +27,7 @@ class App extends React.Component {
           <Route path="/loggedin" component={LoggedInPage}/>
           <Route path="/relogin" component={ReloginPage}/>
           <Route path="/adminLogin" component={AdminLoginPage}/>
+          <Route path="/teacherLoggedin" component={TeacherLoggedInPage}/>
         </Switch>
   
       </div>

@@ -1,0 +1,5 @@
+.teacher-loggedin-page{
+    display: grid;
+    grid-template-columns: 1fr 4fr; 
+    background: #FBFDFF;
+}
