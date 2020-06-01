@@ -27,7 +27,7 @@ class App extends React.Component {
           <Route path="/loggedin" component={LoggedInPage}/>
           <Route path="/relogin" component={ReloginPage}/>
           <Route path="/adminLogin" component={AdminLoginPage}/>
-          <Route path="/teacherLoggedin" component={TeacherLoggedInPage}/>
+          <Route path="/TeacherLoggedin" component={TeacherLoggedInPage}/>
         </Switch>
   
       </div>

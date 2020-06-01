@@ -56,7 +56,9 @@ export const AdminLoginPage = () =>{
             }
             if (typeof received === "object"){
                 dispatch(login(received))
-                history.push("/teacherLoggedin")
+                if (received.accountType === "teacher")  history.push("/TeacherLoggedin")
+                
+
             }
         })
     }
