@@ -2,10 +2,32 @@
     width: 100%;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* justify-content: space-between; */
+    /* padding: 5rem 0; */
     background: #F8F8FF;
+    position: relative;
 }
+
+.admin-login-upper-text,
+.admin-login-upper-text2{
+    font-family: Merriweather;
+    font-weight: 600;
+    color: rgb(88, 88, 88);
+}
+.admin-logo-text-span{
+    font-size: 2.7rem;
+}
+.admin-login-upper-text{
+    margin-top: 5rem;
+}
+.admin-login-upper-text2{
+    margin-bottom: 8rem;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
 
 .admin-login-container{
     width: 30%;
@@ -55,13 +77,15 @@
 .admin-login-btn{
      
     height: 3rem;
+    width: 13rem;
     border: none;
     border-radius: 1rem;
     font-size: 1rem;
     color: white;
-    width: 20rem;
     align-self: center;
     background: #A9B972;
     box-shadow:  5px 5px 6px #dadae0, 
                 -5px -5px 6px #ffffff;
+    position: absolute;
+    bottom: 10%;
 }

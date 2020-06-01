@@ -23,6 +23,8 @@ export const AdminLoginPage = () =>{
 
     return(
         <div className="admin-page-div">
+            <h1 className="admin-login-upper-text"><span className="admin-logo-text-span">P</span>ALOMPON <span className="admin-logo-text-span">I</span>NSTITUTE OF <span className="admin-logo-text-span">T</span>ECHNOLOGY</h1>
+            <h2 className="admin-login-upper-text2">A Charter State College since 1972</h2>
             <div className="admin-login-container">
                 <img className="admin-login-logo" src={PITLogo} alt="Pit Logo"/>
                 <form className="admin-login-form" onSubmit="">
