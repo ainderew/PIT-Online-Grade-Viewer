@@ -13,7 +13,7 @@ export const LoggedInPage = () =>{
     let history = useHistory();
 
 
-    const [sideNavigationData] = useState([
+    const [navigationData] = useState([
         {
             linkName: "Home",
             linkAddress: "/loggedin",
@@ -53,7 +53,7 @@ export const LoggedInPage = () =>{
         return(
             <Router>
                 <div className="loggedInPage">
-                    <SideNavigation navigationData={sideNavigationData} />
+                    <SideNavigation navigationData={navigationData} />
                     <div className="main-container-loggedinPage">
                         <UserHeader />
                         <Switch>

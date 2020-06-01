@@ -17,12 +17,12 @@ export const TeacherLoggedInPage = () =>{
             subMenuLi: [
                 {
                     linkAddress: "/loggedin/grades",
-                    linkName: "View Grades"
+                    linkName: "Submit Grades"
                     
                 },
                 {
                     linkAddress: "/prospectus",
-                    linkName: "Prospectus"
+                    linkName: "Handled Subjects"
                     
                 }
             ]
@@ -37,6 +37,7 @@ export const TeacherLoggedInPage = () =>{
     return(
         <div className="teacher-loggedin-page">
             <SideNavigation navigationData={navigationData} />
+            <div className="main-container-loggedinPage"></div>
             
         </div>
     )
