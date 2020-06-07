@@ -36,7 +36,7 @@ export const AdminLoginPage = () =>{
             idNumber: userNameValue,
             password: passwordValue
         }
-        const data = await fetch("https://online-grade-viewer-api.herokuapp.com/Login/adminLogin",{
+         await fetch("https://online-grade-viewer-api.herokuapp.com/Login/teacherLogin",{
             method: "POST",
             mode:"cors",
             headers: {
@@ -54,12 +54,8 @@ export const AdminLoginPage = () =>{
                 setButton(<button className="submit-btn" type="submit">Log-in</button>)
                 setIndicator(<h1 className="errorIndicator-text">Wrong Password</h1>)
             }
-            if (typeof received === "object"){
-                dispatch(login(received))
-                if (received.accountType === "teacher")  history.push("/TeacherLoggedin")
-                
-
-            }
+            dispatch(login(received))
+            history.push("/TeacherLoggedin")  
         })
     }
 

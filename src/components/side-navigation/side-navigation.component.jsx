@@ -5,7 +5,6 @@ import PitLogo from "../../assets/PitLogo.png"
 
 export const SideNavigation = (props) =>{
    
-    console.log(props.navigationData)
     return(
         <div className="side-nav">
             <div className="sec-1 sec">

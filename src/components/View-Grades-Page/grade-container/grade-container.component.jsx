@@ -1,10 +1,41 @@
-import React from "react";
+import React, {useEffect,useState} from "react";
 import "./grade-container.style.css";
 
 export const GradeContainer = (props) =>{
-  const subjectNameArray = props.data[props.index].grades.map(subject => subject.subjectName)
-  const subjectGradeArray = props.data[props.index].grades.map(subject => subject)
-  
+  // const subjectNameArray = props.data[props.index].grades.map(subject => subject.subjectName)
+  // const subjectGradeArray = props.data[props.index].grades.map(subject => subject)
+
+  const [gradeData, setGradeData] = useState([])
+
+  const getData = async (subjectName,subjectId) =>{
+    const request = {
+      subjectName: subjectName,
+      idNumber: props.studentIdNumber,
+      year: props.data[props.index].semesterYear,
+      semester: props.data[props.index].semester
+    }
+
+    await fetch("https://online-grade-viewer-api.herokuapp.com/Students/getGradeInfo",{
+      method: "POST",
+      mode: "cors",
+      headers: {
+        "Content-Type" : "application/json"
+      },
+      body: JSON.stringify(request)
+      
+    })
+    .then(response => response.json())
+    .then(data => {
+      // const placeHolder = [...gradeData]
+      setGradeData(gradeData => [...gradeData,data])
+      console.log(data)
+    })
+
+  }
+  useEffect(()=>{
+    props.data[props.index].grades.map( subject => getData(subject.subjectName,subject.subjectId))
+    
+  },[])
   
   return(
     <div className="grade-container-div">
@@ -17,10 +48,10 @@ export const GradeContainer = (props) =>{
              <div className="subject-code grade-container-row"><h2 className="grade-container-header-text">Subject Code</h2></div>
              <div className="subject-name grade-container-row"><h2 className="grade-container-header-text">Subject Name</h2></div>
            </div>
-            {subjectNameArray.map(el=> {
+            {gradeData.map(el=> {
               return <div className="grade-left-subject-information">
-                <div className="grade-container-row"><h1 className="grade-container-main-text">{el}</h1></div>
-                <div className="grade-container-row"><h1 className="grade-container-main-text">{el}</h1></div>
+                <div className="grade-container-row"><h1 className="grade-container-main-text">{el.subjectCode}</h1></div>
+                <div className="grade-container-row"><h1 className="grade-container-main-text">{el.subjectName}</h1></div>
               </div>
             })}
          </div>
@@ -32,11 +63,11 @@ export const GradeContainer = (props) =>{
                 <div className="FG-header grade-container-row"><h2 className="grade-container-header-text">FG</h2></div>
               </div>
 
-              {subjectGradeArray.map(el=> {
+              {gradeData.map(el=> {
               return <div className="grade-header-right">
-                <div className="grade-container-row">{el.subjectUnits}</div>
-                <div className="grade-container-row">{el.subjectGradeMG}</div>
-                <div className="grade-container-row">{el.subjectGradeFG}</div>
+                <div className="grade-container-row">{el.units}</div>
+                <div className="grade-container-row">{el.MidtermGrade}</div>
+                <div className="grade-container-row">{el.FinalGrade}</div>
               </div>
             })}
           </div>

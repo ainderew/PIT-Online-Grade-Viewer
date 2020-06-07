@@ -29,7 +29,7 @@ export const LoginPage = () =>{
             idNumber: idNumberValue,
             password: passwordValue
         }
-        const data = await fetch("https://online-grade-viewer-api.herokuapp.com/Login",{
+        await fetch("https://online-grade-viewer-api.herokuapp.com/Login",{
             method: "POST",
             mode:"cors",
             headers: {

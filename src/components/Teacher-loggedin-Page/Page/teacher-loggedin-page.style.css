@@ -1,5 +1,12 @@
 .teacher-loggedin-page{
     display: grid;
-    grid-template-columns: 1fr 4fr; 
+    grid-template-columns: 1fr 4.5fr; 
     background: #FBFDFF;
+}
+
+.teacher-container-loggedinPage{
+    display: grid;
+    /* grid-template-rows: 1fr 4.3fr; */
+    grid-template-rows: fit-content(1px)
+
 }

@@ -4,7 +4,6 @@ import {useSelector} from "react-redux"
 import {UserPicture} from "../user-picture/user-picture.component"
 import {UserInfo} from "../user-information/user-info.component"
 import {TeacherInfo} from "../../Teacher-loggedin-Page/teacher-information/teacher-information.component"
-import {AdminInfo} from "../../Admin-Loggedin-Page/admin-information/admin-info.component"
 import {NotificationButton} from "../notification-button/notification-button.component"
 import NotificationSVG from "../../../assets/notification.svg"
 import AlertSVG from "../../../assets/alert.svg"
@@ -21,7 +20,6 @@ export const UserHeader = () =>{
         <UserPicture className="userPhotoHeader" path={userInfo.idPicture}/>
        {userInfo.accountType === "student" ?  <UserInfo userData={userInfo}/> : null}
        {userInfo.accountType === "teacher" ?  <TeacherInfo userData={userInfo}/> : null}
-       {userInfo.accountType === "admin" ?  <AdminInfo userData={userInfo}/> : null}
       </div>
 
       <div className="right-user-header">

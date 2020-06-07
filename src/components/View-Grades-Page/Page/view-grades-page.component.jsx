@@ -6,12 +6,11 @@ import {GradeContainer} from "../grade-container/grade-container.component"
 export const ViewGradesPage = () =>{
   const data = useSelector(state => state.logInfoReducer)
 
-  const grader = data.records
 
   return(
     <div className="view-grades-page">  
-     {grader.map((el,index) => <GradeContainer data={grader} index={index}/> )}
-     {grader.map((el,index) => <GradeContainer data={grader} index={index}/> )}
+     {data.records.map((el,index) => <GradeContainer data={data.records} index={index} studentIdNumber={data.idNumber} /> )}
+     
     </div>
   )
 }

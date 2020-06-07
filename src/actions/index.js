@@ -5,8 +5,10 @@ export const login = (userInfo) =>{
   }
 }
 
-export const isLoading = () =>{
+export const teacherSubject = (subjectInfo) =>{
   return{
-    type: "loading"
+    type: "validSubject",
+    subjectInfo: subjectInfo
   }
+  
 }

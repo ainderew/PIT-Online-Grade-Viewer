@@ -60,7 +60,7 @@ export const LoggedInPage = () =>{
                             <Route path="/loggedin" exact component={LoggedInHomePage} />
                             <Route path="/loggedin/grades" component={ViewGradesPage} />
                         </Switch>
-                    </div>
+                    </div>  
                 </div>
             </Router>
         )

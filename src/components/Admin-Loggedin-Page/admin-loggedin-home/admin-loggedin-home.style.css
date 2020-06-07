@@ -1,10 +1,10 @@
-.admin-loggedin-page{
+.teacher-loggedin-page{
     display: grid;
     grid-template-columns: 1fr 4fr; 
     background: #FBFDFF;
 }
 
-.admin-loggedin-page-container{
+.teacher-container-loggedinPage{
     display: grid;
     /* grid-template-rows: 1fr 4.3fr; */
     grid-template-rows: fit-content(1fr)
