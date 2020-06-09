@@ -10,20 +10,3 @@ code {
     monospace;
 }
 
-#notSupported{
-  display: none;
-}
-@media only screen and (max-width: 1200px){
-  #root{
-    display: none;
-  }
-  #notSupported{
-    display: block !important;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    font-size: .9rem;
-    text-align: center;
-  }
-}

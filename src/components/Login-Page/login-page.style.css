@@ -1,134 +1,121 @@
-.login-main-page{
-  background: #799F0C;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ACBB78, #799F0C);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ACBB78, #799F0C); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  
-  
+.student-login-page{
   width: 100%;
   height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.login-container{
-  width: 80%;
-  height: 90%;
-  background: #9DB258;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* box-shadow:  10px 10px 20px #8da04f, 
-             -10px -10px 20px #adc461; */
-  
-}
-.login-container-left{
-  grid-column: 1/2;
-  width: 100%;
-  background: #A9B972;
-  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  box-shadow:  6px 6px 12px #909d61, 
-             -6px -6px 12px #c2d5839d;
-
+  /* justify-content: space-between; */
+  /* padding: 5rem 0; */
+  background: #F8F8FF;
   position: relative;
 }
-.logo-text,
-.logo-subtext{
-  color: #A9B972;
-  font-weight: 900;
-}
-.logo-text{
-  font-size: 5rem;
-  position: absolute;
-  top: 5%;
-  text-shadow:  2px 2px 2px #909d61,   
-               -2px -2px 2px #c2d58377;
-}
-.logo-subtext{
-  font-size: 1.2rem;
-  position: absolute;
-  top: 20%;
-  text-shadow: 2px 2px 1px #909d61,  -0px -0px 1px #c2d583;
-}
-.logo-text-span{
-  /* color: #7CA012; */
-  /* color: white; */
-  font-weight: 900;
-}
-.logo-text-lower{
-  font-size: 2rem;
-  top: 80%;
-}
-.logo{
-  width: 45%;
-}
-.login-container-right{
-    position: relative;
-    background: white;
 
+.admin-login-upper-text,
+.admin-login-upper-text2{
+  font-family: Merriweather;
+  font-weight: 600;
+  color: rgb(88, 88, 88);
+}
+.admin-logo-text-span{
+  font-size: 2.7rem;
+}
+.admin-login-upper-text{
+  margin-top: 5rem;
+}
+.admin-login-upper-text2{
+  margin-bottom: 8rem;
+  font-weight: 300;
+  font-size: 1rem;
 }
 
-.login-form{
+
+.admin-login-container{
+  width: 30%;
+  height: 50%; 
+  border-radius: 50px;
+  background: #F8F8FF;
+  box-shadow:  5px 5px 6px #dadae0, 
+           -5px -5px 6px #ffffff;
+  position: relative;
+     
+}
+.admin-login-logo{
+  width: 10rem;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+.admin-login-form{
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 8rem 8rem 0 8rem;
-  position: relative;
+  /* align-items: center; */
+  padding: 0 4rem;
 }
-.input-container{
+.admin-input-div{
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
-}
-
-.input-field{
-  height: 2.5rem;
-  position: relative;
-  box-shadow: inset 6px 6px 7px #ededed, 
-            inset -6px -6px 7px #ffffff;
-  border: none;
-  background: #fff;
-  padding: 1rem;
+  margin-bottom: 2rem;
   
 }
-.input-field.pass{
-  background: url(../../assets/lock.svg) no-repeat; 
-  background-position: 97%;
-  background-size: 1.5rem;
-  
+.admin-login-label{
+  margin-bottom: 1rem;
 }
-
-.submit-btn{
-  margin-top: 2rem;
-  height: 3.4rem;
-  background: #9DB258;
-  box-shadow:  6px 6px 12px #ededed, 
-             -6px -6px 12px #ffffff;
+.admin-login-inputField{
+  height: 2rem;
+  border-radius: 1rem;
   border: none;
-  border-radius: 2rem;
-  font-size: 1.3rem;
-  color: white;
   outline: none;
+  background: #F8F8FF;
+  box-shadow: inset 5px 5px 9px #e2e2e8, 
+          inset -5px -5px 9px #ffffff;
+  padding: 0 2rem;
+  font-size: 1rem;
+}
+.student-login-btn-conainter{
+  display: flex;
+  justify-content: space-evenly;
+  /* border: 1px solid green; */
+  width: 100%;
+  align-self: center;
+  margin-top: 2rem;
+  margin-bottom: -2rem;
+}
+
+.student-login-btn,
+.student-login-enroll-btn{
+  height: 3rem;
+  width: 11rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+}
+.student-login-btn{
+  color: white;
+  background: #A9B972;
+  box-shadow:  5px 5px 6px #dadae0, 
+              -5px -5px 6px #ffffff;
+  /* position: absolute;
+  bottom: 10%; */
+}
+.student-login-enroll-btn{
+  background: #F8F8FF;
+  box-shadow: inset 5px 5px 10px #d3d3d9, 
+            inset -5px -5px 10px #ffffff;
+  transition: 300ms ease;
+  animation: enroll-btn 300ms infinite
+}
+.student-login-enroll-btn:hover{
+  box-shadow:  5px 5px 10px #d3d3d9, 
+               -5px -5px 10px #e9e9e9;
+  
 }
 
 
-.userLogo{
-    width: 4rem;
-    position: absolute;
-    top: 13%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.right-text{
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.4rem;
-}
+
 
 .errorIndicator-text{
   font-size: 1rem;

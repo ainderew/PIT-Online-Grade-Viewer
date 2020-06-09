@@ -1,0 +1,91 @@
+.login-enrollment-page{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 5fr .4fr;
+    background: #F8F8FF;
+}
+.login-enrollment-header{
+    grid-row: 1/2;
+    /* border: red solid 1px; */
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+
+}
+.login-enrollment-header-img{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1rem;
+}
+.login-enrollment-text1{
+    font-size: .9rem;
+    font-family: Merriweather;
+}
+.login-enrollment-text2{
+    font-size: .7rem;
+    font-weight: 300;
+}
+
+.login-enrollment-code-form{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    /* border: 1px solid green; */
+    width: 90%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #F8F8FF;
+    box-shadow:  5px 5px 5px #e7e7ed, 
+             -5px -5px 5px #ffffff;
+}
+.login-enrollment-code-input-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.login-enrollment-input{
+    margin-top: 1rem;
+    border: none;
+    border-radius: 1rem;
+    outline: none;
+    background: #F8F8FF;
+    box-shadow: inset 4px 4px 8px #d3d3d9, 
+    inset -4px -4px 8px #ffffff;
+    padding: 0 2rem;
+}
+
+.login-enrollment-code-input{
+    height: 1.5rem;
+    width: 15rem;
+}
+
+.login-enrollment-code-btn{
+    color: white;
+    background: #A9B972;
+    box-shadow:  5px 5px 6px #dadae0, 
+                -5px -5px 6px #ffffff;
+    border: none;
+    border-radius: 1rem;
+    width: 8rem;
+    height: 2.5rem;
+    margin-top: 2rem;
+  }
+
+
+
+  .enrollment-footer{
+      grid-row: 3/4;
+      display: flex;
+      align-items: center;
+      padding: 0 1rem;
+      background: #A9B972;
+  }
+  .enrollment-footer-text{
+      font-size: .7rem;
+  }

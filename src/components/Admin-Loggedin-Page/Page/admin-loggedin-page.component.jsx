@@ -36,7 +36,6 @@ export const AdminLoggedInPage = () =>{
             linkSubMenu: false
         }
     ])
-
     return(
 
         <Router>
