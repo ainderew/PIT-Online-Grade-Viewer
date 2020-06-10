@@ -30,7 +30,7 @@ export const LoginEnrollment = () =>{
         const bodyData={
             code: code.Value
         }
-        await fetch("http://localhost:3000/createStudent/checkCode",{
+        await fetch("https://online-grade-viewer-api.herokuapp.com/createStudent/checkCode",{
             method: "POST",
             mode: "cors",
             headers:{
