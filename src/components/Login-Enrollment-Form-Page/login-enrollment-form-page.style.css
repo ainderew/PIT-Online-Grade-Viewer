@@ -27,7 +27,9 @@
     font-size: .7rem;
     font-weight: 300;
 }
-
+.login-enrollment-code-form-off{
+    display: none;
+}
 .login-enrollment-code-form{
     position: absolute;
     left: 50%;
@@ -44,6 +46,39 @@
     box-shadow:  5px 5px 5px #e7e7ed, 
              -5px -5px 5px #ffffff;
 }
+.login-enrollment-code-img{
+
+    width: 3.5rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-70%);
+    animation: enrollmentQuestionIcon 5s infinite
+}
+@keyframes enrollmentQuestionIcon{
+    0%{
+        width: 3.5rem;
+    }
+    10%{
+        width: 4rem;
+    }
+    20%{
+        width: 3.5rem;
+    }
+}
+.login-enrollment-code-img:hover~.login-enrollment-information-div{
+    display: block;
+}
+.login-enrollment-information-div{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-350%);
+}
+.login-enroll-infoText{
+    font-size: .9rem;
+}
 .login-enrollment-code-input-div{
     display: flex;
     flex-direction: column;
@@ -57,7 +92,8 @@
     background: #F8F8FF;
     box-shadow: inset 4px 4px 8px #d3d3d9, 
     inset -4px -4px 8px #ffffff;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
+    height: 1.5rem;
 }
 
 .login-enrollment-code-input{
@@ -75,17 +111,123 @@
     width: 8rem;
     height: 2.5rem;
     margin-top: 2rem;
+    outline: none;
   }
 
+.login-enrollment-label{
+    font-size: .9rem;
+}
+
+/* -----------START OF STUDENT FORM--------------- */
+
+.login-enrollment-student-form-off{
+    display: none;
+}
+.login-enrollment-student-form{
+    grid-row: 2/3;
+    display: grid;
+    grid-template-rows: repeat(6, 6rem);
+    /* border: 1px solid red; */
+    padding: 2rem 2rem 0 2rem;
+   
+}
+
+.login-enrollment-student-form-row1{
+    display: flex;
+}
+.login-enrollment-student-form-row6{
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
-  .enrollment-footer{
+
+/* INPUT FIELDS */
+.login-enrollment-fName{
+    width: 13rem;
+    margin-right: 1rem;
+}
+.login-enrollment-idNumber{
+    width: 8rem;
+}
+.login-enrollment-phone{
+    width: 15rem;
+    background: url(../../assets/phone.svg) 1rem no-repeat;
+    background-size: 3rem;
+    padding: 0 5rem;
+}
+
+
+.login-enrollment-student-form-btn{
+    width: 13rem;
+    height: 3rem;
+    background: none;
+    border: 4px solid #3AB19B;
+    border-radius: 2rem;
+    color: #3AB19B;
+    font-size: 1rem;
+}
+.login-enrollment-student-form-btn:hover{
+    transform: scale(.9);
+}
+/* -------------END OF STUDENT FORM---------------- */
+
+
+
+/* FOOTER */
+.enrollment-footer{
       grid-row: 3/4;
       display: flex;
       align-items: center;
       padding: 0 1rem;
       background: #A9B972;
-  }
-  .enrollment-footer-text{
+}
+.enrollment-footer-text{
       font-size: .7rem;
-  }
+}
+
+
+
+
+@media only screen and (min-width: 1280px){
+
+    .login-enrollment-header{
+        padding-left: 3rem;
+    }
+    .login-enrollment-header-img{
+        width: 6rem;
+        height: 6rem;
+        margin-right: 1.5rem;
+    }
+    .login-enrollment-text1{
+        font-size: 1.6rem;
+    }
+    .login-enrollment-text2{
+        font-size: 1rem;
+    }
+    .login-enroll-span{
+        font-size: 2rem;
+    }
+    .login-enrollment-code-form{
+        width: 20%;
+        height: 35%;
+    }
+    .login-enrollment-code-img{
+        width: 5rem;
+    }
+
+    @keyframes enrollmentQuestionIcon{
+        0%{
+            width: 5rem;
+        }
+        10%{
+            width: 5.5rem;
+        }
+        20%{
+            width: 5rem;
+        }
+    }
+
+}
