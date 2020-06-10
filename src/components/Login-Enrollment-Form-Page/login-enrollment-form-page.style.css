@@ -27,10 +27,9 @@
     font-size: .7rem;
     font-weight: 300;
 }
-.login-enrollment-code-form-off{
-    display: none;
-}
+
 .login-enrollment-code-form{
+    opacity: 1;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -45,9 +44,9 @@
     background: #F8F8FF;
     box-shadow:  5px 5px 5px #e7e7ed, 
              -5px -5px 5px #ffffff;
+    /* transition: 300ms ease; */
 }
 .login-enrollment-code-img{
-
     width: 3.5rem;
     position: absolute;
     top: 0;
@@ -120,15 +119,14 @@
 
 /* -----------START OF STUDENT FORM--------------- */
 
-.login-enrollment-student-form-off{
-    display: none;
-}
 .login-enrollment-student-form{
     grid-row: 2/3;
     display: grid;
     grid-template-rows: repeat(6, 6rem);
     border: 1px solid red;
     padding: 2rem 2rem 0 2rem;
+    opacity: 1;
+    transition: 300ms ease;
    
 }
 

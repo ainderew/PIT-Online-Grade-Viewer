@@ -1,0 +1,62 @@
+.off{
+    animation: fadeOut 300ms forwards;
+    display: none !important;
+}
+.on{
+    animation: fadeIn 300ms forwards;
+}
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+        display: flex;
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.confirmation-module{
+    width: 95%;
+    height: 50%;
+    display: grid;
+    grid-template-rows:  3rem repeat(6,2rem);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    background: #F8F8FF;
+    box-shadow:  5px 5px 5px #e7e7ed, 
+             -5px -5px 5px #ffffff;
+    z-index: 3;
+    padding: 0 2rem;
+}
+
+.confirmation-module-row{
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    
+}
+.confirmation-module-row-header{
+    justify-content: center;
+}
+.confirmation-module-header{
+    color: #3AB19B;
+}
+.confirmation-module-text1{
+    font-size: .8rem;
+    font-weight: 300;
+}
+.confirmation-module-text-data{
+    font-size: .9rem;
+    font-weight: 900;
+}
