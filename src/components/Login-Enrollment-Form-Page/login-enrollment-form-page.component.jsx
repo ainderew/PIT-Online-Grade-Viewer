@@ -10,6 +10,13 @@ export const LoginEnrollment = () =>{
         Value: "",
         Status: "login-enrollment-code-form on"
     })
+    const onChangeCodeValue = (e) =>{
+        setCode({
+            ...code,
+            Value: e.target.value
+        })
+    }
+
 
     const [formData, setFormData] = useState({
         Status: "login-enrollment-student-form off",
@@ -18,26 +25,22 @@ export const LoginEnrollment = () =>{
         course: "",
         yearLevel: "",
         email: "",
-        phoneNumber: "1"
+        phoneNumber: ""
     })
     const onChangeFormData = (key,e) =>{
-        // const obj = {}
-        // obj[key] = e.target.value;
         setFormData({
             ...formData,
             [`${key}`]: e.target.value
         })
     }
 
-    const [confirmationStatus, setConfirmationStatus] = useState("confirmation-module off")
+    const [confirmationStatus, setConfirmationStatus] = useState({
+        Status: "confirmation-module off",
+        parseId: false
+    })
 
-    const onChangeCodeValue = (e) =>{
-        setCode({
-            ...code,
-            Value: e.target.value
-        })
-    }
 
+  
     const checkCode = async (e) =>{
         e.preventDefault();
         const bodyData={
@@ -66,10 +69,49 @@ export const LoginEnrollment = () =>{
     }
 
     const confirmation = () =>{
-        setConfirmationStatus("confirmation-module on")
+        setConfirmationStatus({
+            Status: "confirmation-module on",
+            parseId: true
+        })
         setFormData({
             ...formData,
             Status: "login-enrollment-student-form off"
+        })
+    }
+
+
+    const yearLevelSelector = () =>{
+        if (formData.course === "Junior High School"){
+            return (
+                <select className="login-enrollment-input" value={formData.yearLevel} onChange={(e)=>onChangeFormData("yearLevel",e)}>
+                    <option value=""></option>
+                    <option value="Grade 7">Grade 7</option>
+                    <option value="Grade 8">Grade 8</option>
+                    <option value="Grade 9">Grade 9</option>
+                    <option value="Grade 10">Grade 10</option>
+                </select>
+            )
+            
+        }else if(formData.course === "Senior High School"){
+            return (
+                <select className="login-enrollment-input" value={formData.yearLevel} onChange={(e)=>onChangeFormData("yearLevel",e)}>
+                    <option value=""></option>
+                    <option value="Grade 11">Grade 11</option>
+                    <option value="Grade 12">Grade 12</option>
+                </select>
+            )
+        }
+    }
+
+
+    const adjustInfo = () =>{
+          setConfirmationStatus({
+            ...confirmationStatus,
+            Status: "confirmation-module off"
+        })
+        setFormData({
+            ...formData,
+            Status: "login-enrollment-student-form on"
         })
     }
 
@@ -82,7 +124,9 @@ export const LoginEnrollment = () =>{
                     <h2 className="login-enrollment-text2">A Charter State College since 1972</h2>
                 </div>
             </div>
-            <ConfirmationModule DisplayStatus={confirmationStatus} UserData={formData} />
+
+            <ConfirmationModule ToggleOffModule={adjustInfo} DisplayStatus={confirmationStatus.Status} IdParser={confirmationStatus.parseId} UserData={formData} />
+
             <form onSubmit={checkCode} className={code.Status}>
                 <img className="login-enrollment-code-img" src={Question} alt=""/>
                 <div className="login-enrollment-information-div">
@@ -110,6 +154,7 @@ export const LoginEnrollment = () =>{
                    <div className="login-enrollment-code-input-div">
                        <label className="login-enrollment-label" htmlFor="">Course</label>
                        <select className="login-enrollment-input" value={formData.course} onChange={(e)=>onChangeFormData("course",e)}>
+                           <option value=""></option>
                            <option value="Junior High School">Junior High School</option>
                            <option value="Senior High School">Senior High School</option>
                        </select>
@@ -118,14 +163,7 @@ export const LoginEnrollment = () =>{
                <div className="login-enrollment-student-form-row3">
                    <div className="login-enrollment-code-input-div">
                        <label className="login-enrollment-label" htmlFor="">Year Level</label>
-                       <select className="login-enrollment-input" value={formData.yearLevel} onChange={(e)=>onChangeFormData("yearLevel",e)}>
-                           <option value="Junior High School">Grade 7</option>
-                           <option value="Senior High School">Grade 8</option>
-                           <option value="Senior High School">Grade 9</option>
-                           <option value="Senior High School">Grade 10</option>
-                           <option value="Senior High School">Grade 11</option>
-                           <option value="Senior High School">Grade 12</option>
-                       </select>
+                        {yearLevelSelector()}
                    </div>
                </div>
                <div className="login-enrollment-student-form-row4">

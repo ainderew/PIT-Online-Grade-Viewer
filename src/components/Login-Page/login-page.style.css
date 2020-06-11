@@ -10,26 +10,26 @@
   position: relative;
 }
 
-.admin-login-upper-text,
-.admin-login-upper-text2{
+.student-login-upper-text,
+.student-login-upper-text2{
   font-family: Merriweather;
   font-weight: 600;
   color: rgb(88, 88, 88);
 }
-.admin-logo-text-span{
+.student-logo-text-span{
   font-size: 2.7rem;
 }
-.admin-login-upper-text{
+.student-login-upper-text{
   margin-top: 5rem;
 }
-.admin-login-upper-text2{
+.student-login-upper-text2{
   margin-bottom: 8rem;
   font-weight: 300;
   font-size: 1rem;
 }
 
 
-.admin-login-container{
+.student-login-container{
   width: 30%;
   height: 50%; 
   border-radius: 50px;
@@ -40,14 +40,14 @@
   
      
 }
-.admin-login-logo{
+.student-login-logo{
   width: 10rem;
   position: absolute;
   left: 50%;
   top: 0;
   transform: translate(-50%, -50%);
 }
-.admin-login-form{
+.student-login-form{
   width: 100%;
   height: 100%;
   display: flex;
@@ -56,16 +56,15 @@
   /* align-items: center; */
   padding: 0 4rem;
 }
-.admin-input-div{
+.student-input-div{
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
-  
 }
-.admin-login-label{
+.student-login-label{
   margin-bottom: 1rem;
 }
-.admin-login-inputField{
+.student-login-inputField{
   height: 2rem;
   border-radius: 1rem;
   border: none;
@@ -199,24 +198,38 @@
   .student-login-page{
     min-height: 100%;
   }
-  .admin-login-upper-text{
+  .student-login-upper-text{
     font-size: 1rem;
   }
-  .admin-logo-text-span{
+  .student-logo-text-span{
     font-size: 1.5rem !important;
   }
 
-  .admin-login-container{
+  .student-login-container{
     width: 90% !important;
     height: 50% !important;
   }
-  .admin-login-logo{
+  .student-login-logo{
     width: 7rem !important;
   }
-  .admin-login-form{
+  .student-login-form{
     padding: 2rem !important;
   }
-  .admin-login-inputField{
+  .student-login-inputField{
     height: 1.5rem !important;
   }
+  
+  .student-input-div{
+    margin-bottom: 1rem;
+  }
+  
+  .student-login-btn,
+  .student-login-enroll-btn{
+  height: 2.5rem;
+  width: 6.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: .8rem;
+}
+
 }

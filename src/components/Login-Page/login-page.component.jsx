@@ -72,18 +72,18 @@ export const LoginPage = () =>{
     }
    return(
         <div className="student-login-page">
-            <h1 className="admin-login-upper-text"><span className="admin-logo-text-span">P</span>ALOMPON <span className="admin-logo-text-span">I</span>NSTITUTE OF <span className="admin-logo-text-span">T</span>ECHNOLOGY</h1>
-            <h2 className="admin-login-upper-text2">A Charter State College since 1972</h2>
-            <div className="admin-login-container">
-                <img className="admin-login-logo" src={PitLogo} alt="Pit Logo"/>
-                <form className="admin-login-form" onSubmit={getUser}>
-                    <div className="admin-input-div">
-                        <label className="admin-login-label" htmlFor="userName" >USER ID</label>
-                        <input className="admin-login-inputField" type="text" name="userName" value={idNumberValue} onChange={onChangeIdNumber} />
+            <h1 className="student-login-upper-text"><span className="student-logo-text-span">P</span>ALOMPON <span className="student-logo-text-span">I</span>NSTITUTE OF <span className="student-logo-text-span">T</span>ECHNOLOGY</h1>
+            <h2 className="student-login-upper-text2">A Charter State College since 1972</h2>
+            <div className="student-login-container">
+                <img className="student-login-logo" src={PitLogo} alt="Pit Logo"/>
+                <form className="student-login-form" onSubmit={getUser}>
+                    <div className="student-input-div">
+                        <label className="student-login-label" htmlFor="userName" >USER ID</label>
+                        <input className="student-login-inputField" type="text" name="userName" value={idNumberValue} onChange={onChangeIdNumber} />
                     </div>
-                    <div className="admin-input-div">
-                        <label className="admin-login-label" htmlFor="userName" >PASSWORD</label>
-                        <input className="admin-login-inputField" type="password" name="password" value={passwordValue} onChange={onChangePassword} />
+                    <div className="student-input-div">
+                        <label className="student-login-label" htmlFor="userName" >PASSWORD</label>
+                        <input className="student-login-inputField" type="password" name="password" value={passwordValue} onChange={onChangePassword} />
                     </div>
                     {loginErrorIndicator}
                     <div className="student-login-btn-conainter">
