@@ -10,3 +10,8 @@
     font-size: .8rem;
   }
 }
+@media only screen and (max-width: 600px){
+  .user-info-div{
+    display: none;
+  }
+}

@@ -1,4 +1,5 @@
-.side-nav{
+.side-nav,
+.side-nav-on{
     background: #fff;
     height: 100vh;
     display: grid;
@@ -63,4 +64,35 @@
         padding: 0 1.5rem;
     }
     
+}
+@media only screen and (max-width: 600px){
+    .side-nav-on,
+    .side-nav{
+        position: absolute;
+        width: 70vw;
+    }
+    .side-nav{
+        animation: sideNav-hide 1s forwards; 
+    }
+    .side-nav-on{
+        animation: sideNav-show 1s forwards;
+    }
+
+
+    @keyframes sideNav-show{
+        0%{
+            transform: translate(-110%,0%);
+        }
+        100%{
+            transform: translate(0%,0%);
+        }
+    }
+    @keyframes sideNav-hide{
+        0%{
+            transform: translate(0%,0%);
+        }
+        100%{
+            transform: translate(-110%,0%);
+        }
+    }
 }

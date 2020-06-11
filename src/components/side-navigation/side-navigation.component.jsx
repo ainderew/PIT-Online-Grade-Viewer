@@ -6,7 +6,7 @@ import PitLogo from "../../assets/PitLogo.png"
 export const SideNavigation = (props) =>{
    
     return(
-        <div className="side-nav">
+        <div className={props.Status}>
             <div className="sec-1 sec">
                 <img className="sidenav-pit-logo" src={PitLogo} alt="PIT Logo"/>
                 <h1 className="sidenav-pit-logo-text">Palompon Institute of Technology</h1>

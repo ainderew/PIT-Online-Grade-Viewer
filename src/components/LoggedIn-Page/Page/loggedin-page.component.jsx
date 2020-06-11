@@ -22,7 +22,6 @@ export const LoggedInPage = () =>{
         },
         {
             linkName: "Student",
-            linkAddress: "",
             linkSubMenu: true,
             subMenuLi: [
                 {
@@ -44,6 +43,25 @@ export const LoggedInPage = () =>{
         }
     ])
 
+    const [menuStatus, setMenuStatus] = useState ({
+        class: "side-nav",
+        status: false
+    })
+    const menuToggler = () =>{
+        if (menuStatus.status===false) {
+            setMenuStatus({
+                class: "side-nav-on",
+                status: true
+            })
+        }else{
+            setMenuStatus({
+                class: "side-nav",
+                status: false
+            })
+        }
+        
+    }
+
     if (Object.entries(userInfo).length === 0){
         history.push("/relogin")
         return(
@@ -53,9 +71,9 @@ export const LoggedInPage = () =>{
         return(
             <Router>
                 <div className="loggedInPage">
-                    <SideNavigation navigationData={navigationData} />
+                    <SideNavigation Status={menuStatus.class} navigationData={navigationData} />
                     <div className="main-container-loggedinPage">
-                        <UserHeader />
+                        <UserHeader MenuToggle={menuToggler} />
                         <Switch>
                             <Route path="/loggedin" exact component={LoggedInHomePage} />
                             <Route path="/loggedin/grades" component={ViewGradesPage} />
