@@ -10,6 +10,7 @@
              -5px -5px 19px #ffffff;
   padding: 0 3rem;
   margin-top: 3rem;
+  /* border: 1px solid red; */
 }
 
 .grade-container-header{
@@ -68,4 +69,30 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+@media only screen and (max-width: 600px){
+  .grade-container-div{
+    width: 90%;
+    height:80%;
+    padding: 0 1rem;
+  }
+  .MG-header,
+  .FG-header{
+    display: flex;
+    justify-content: center;
+  }
+  .grades-container-row{
+    justify-content: center;
+  }
+  .grade-container-semester-text{
+    font-size: 1rem;
+  }
+  .grade-container-header-text{
+    font-size: .7rem;
+  }
+  .grade-container-main-text{
+    font-size: .7rem;
+    font-weight: 400;
+  }
 }

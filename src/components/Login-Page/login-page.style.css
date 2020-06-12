@@ -32,7 +32,7 @@
 
 .student-login-container{
   width: 30%;
-  height: 50%; 
+  min-height: 50%; 
   border-radius: 50px;
   background: #F8F8FF;
   box-shadow:  5px 5px 6px #dadae0, 
@@ -208,7 +208,7 @@
 
   .student-login-container{
     width: 90% !important;
-    height: 50% !important;
+    /* min-height: 50% !important; */
   }
   .student-login-logo{
     width: 7rem !important;

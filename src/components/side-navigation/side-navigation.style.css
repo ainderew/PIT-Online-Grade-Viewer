@@ -72,10 +72,10 @@
         width: 70vw;
     }
     .side-nav{
-        animation: sideNav-hide 1s forwards; 
+        animation: sideNav-hide 300ms forwards; 
     }
     .side-nav-on{
-        animation: sideNav-show 1s forwards;
+        animation: sideNav-show 300ms forwards;
     }
 
 

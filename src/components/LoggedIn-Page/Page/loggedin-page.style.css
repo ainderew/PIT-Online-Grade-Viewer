@@ -9,6 +9,7 @@
 .main-container-loggedinPage{
     display: grid;
     grid-template-rows: fit-content(1fr)
+    /* grid-template-rows: fit-content(1fr) 5fr; */
 
 }
 
@@ -28,8 +29,9 @@
         width: 100vw;
         height: 100vh;
         display: grid;
-        grid-template-rows: .5fr 1fr;
-        
+        grid-template-rows: 6rem 1fr;
+        /* grid-template-rows: fit-content(1fr); */
+
     
     }
 }

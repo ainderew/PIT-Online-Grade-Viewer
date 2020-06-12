@@ -65,9 +65,9 @@ export const GradeContainer = (props) =>{
 
               {gradeData.map(el=> {
               return <div className="grade-header-right">
-                <div className="grade-container-row">{el.units}</div>
-                <div className="grade-container-row">{el.MidtermGrade}</div>
-                <div className="grade-container-row">{el.FinalGrade}</div>
+                <div className="grade-container-row grades-container-row">{el.units}</div>
+                <div className="grade-container-row grades-container-row">{el.MidtermGrade}</div>
+                <div className="grade-container-row grades-container-row">{el.FinalGrade}</div>
               </div>
             })}
           </div>

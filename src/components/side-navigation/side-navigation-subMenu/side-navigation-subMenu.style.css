@@ -13,9 +13,10 @@
 @media only screen and (max-width: 600px){
     .subMenu{
         top:0%;
-        transform: translate(60%);
+        transform: translate(50%,0);
         box-shadow:  5px 5px 10px #e7e9eb, 
              -5px -5px 10px #eeeeee;
+        z-index: 5;
     }
     
 }
