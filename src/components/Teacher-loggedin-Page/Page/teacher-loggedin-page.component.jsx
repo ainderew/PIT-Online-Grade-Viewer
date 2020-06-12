@@ -21,7 +21,6 @@ export const TeacherLoggedInPage = () =>{
         },
         {
             linkName: "Teacher",
-            linkAddress: "",
             linkSubMenu: true,
             subMenuLi: [
                 {
@@ -68,12 +67,35 @@ export const TeacherLoggedInPage = () =>{
         initializeSubjects()
     },[])
     
+
+    // FOR MENU
+    const [menuStatus, setMenuStatus] = useState ({
+        class: "side-nav",
+        status: false
+    })
+    const menuToggler = () =>{
+        if (menuStatus.status===false) {
+            setMenuStatus({
+                class: "side-nav-on",
+                status: true
+            })
+        }else{
+            setMenuStatus({
+                class: "side-nav",
+                status: false
+            })
+        }
+        
+    }
+
+    // ^^ FOR MENU ^^
+
     return(
         <Router>
             <div className="teacher-loggedin-page">
-                <SideNavigation navigationData={navigationData} />
+                <SideNavigation Status={menuStatus.class} navigationData={navigationData} />
                 <div className="teacher-container-loggedinPage">
-                    <UserHeader />
+                    <UserHeader MenuToggle={menuToggler}/>
                     <Switch>
                         <Route path="/TeacherLoggedin" exact component ={TeacherHome} />
                         <Route path="/TeacherLoggedin/SubmitGrade" component ={SubmitGrade} />

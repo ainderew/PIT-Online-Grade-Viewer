@@ -1,6 +1,7 @@
 .submit-grade-screen{
     display: grid;
     grid-template-rows: 1fr 8fr;
+    /* border: 1px solid red; */
 }
 .submit-grade-screen-row1{
     /* border: 1px solid red; */

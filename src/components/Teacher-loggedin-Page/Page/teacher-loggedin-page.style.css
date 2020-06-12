@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 4.5fr; 
     background: #FBFDFF;
+    position: relative;
 }
 
 .teacher-container-loggedinPage{
@@ -9,4 +10,23 @@
     /* grid-template-rows: 1fr 4.3fr; */
     grid-template-rows: fit-content(1px)
 
+}
+
+
+@media only screen and (max-width: 600px){
+    .teacher-loggedin-page{
+        height: 100vh;
+        width: 100%;
+        /* border: 1px solid blue; */
+        position: relative;
+        /* display: block; */
+    }
+    .teacher-container-loggedinPage{
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-rows: 6rem 1fr;
+
+    
+    }
 }

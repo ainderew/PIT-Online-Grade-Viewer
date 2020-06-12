@@ -25,6 +25,7 @@ export const AdminLoginPage = () =>{
     }
     const [loginErrorIndicator,setIndicator] =useState("")
     const [button,setButton] = useState(<button className="admin-login-btn" type="submit">Log-in</button>)
+    
     const changeToLoader = () =>{
         setButton(<div className="lds-dual-ring"></div>)
     }
@@ -47,15 +48,18 @@ export const AdminLoginPage = () =>{
         .then(response=>response.json())
         .then(received => {
             if(received === "no user"){
-              setButton(<button className="submit-btn" type="submit">Log-in</button>)
+              setButton(<button className="admin-login-btn" type="submit">Log-in</button>)
               setIndicator(<h1 className="errorIndicator-text">Invalid Id Number</h1>)
             }
             if (received === "wrong password"){
-                setButton(<button className="submit-btn" type="submit">Log-in</button>)
+                setButton(<button className="admin-login-btn" type="submit">Log-in</button>)
                 setIndicator(<h1 className="errorIndicator-text">Wrong Password</h1>)
             }
-            dispatch(login(received))
-            history.push("/TeacherLoggedin")  
+            if (typeof received === "object"){
+                dispatch(login(received))
+                history.push("/TeacherLoggedin")  
+            }
+
         })
     }
 

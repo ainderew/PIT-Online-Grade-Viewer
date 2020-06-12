@@ -226,11 +226,20 @@
   
   .student-login-btn,
   .student-login-enroll-btn{
-  height: 2.5rem;
-  width: 6.5rem;
-  border: none;
-  border-radius: 1rem;
-  font-size: .8rem;
-}
+    height: 2.5rem;
+    width: 6.5rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: .8rem;
+  }
+  .lds-dual-ring {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%,0%);
+  }
 
 }

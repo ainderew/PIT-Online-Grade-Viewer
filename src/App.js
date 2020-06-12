@@ -6,7 +6,6 @@ import {LoggedInPage} from "./components/LoggedIn-Page/Page/loggedin-page.compon
 import {ReloginPage} from "./components/Error-Pages/Relogin-Page/relogin-page.component"
 import {AdminLoginPage} from "./components/Admin-Login-Page/admin-login-page.component"
 import {TeacherLoggedInPage} from "./components/Teacher-loggedin-Page/Page/teacher-loggedin-page.component"
-import {AdminLoggedInPage} from "./components/Admin-Loggedin-Page/Page/admin-loggedin-page.component"
 import {LoginEnrollment} from "./components/Login-Enrollment-Form-Page/login-enrollment-form-page.component"
 
 class App extends React.Component {
@@ -30,7 +29,6 @@ class App extends React.Component {
           <Route path="/relogin" component={ReloginPage}/>
           <Route path="/teacherLogin" component={AdminLoginPage}/>
           <Route path="/TeacherLoggedin" component={TeacherLoggedInPage}/>
-          <Route path="/AdminLoggedin" component={AdminLoggedInPage}/>
           <Route path="/LoginEnrollment" component={LoginEnrollment}/>
         </Switch>
   

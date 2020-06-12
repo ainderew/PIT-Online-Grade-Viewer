@@ -89,3 +89,61 @@
     position: absolute;
     bottom: 10%;
 }
+
+  
+  @media only screen and (max-width: 600px){
+    .admin-login-page{
+      min-height: 100%;
+    }
+    .admin-login-upper-text{
+      font-size: 1rem;
+    }
+    .admin-logo-text-span{
+      font-size: 1.5rem !important;
+    }
+  
+    .admin-login-container{
+      width: 90% !important;
+      min-height: 333px !important;
+    }
+    .admin-login-logo{
+      width: 7rem !important;
+    }
+    .admin-login-form{
+      padding: 2rem !important;
+    }
+    .admin-login-inputField{
+      height: 1.5rem !important;
+    }
+    
+    .admin-input-div{
+      margin-bottom: 1rem;
+    }
+    .admin-login-btn{
+     
+        height: 3rem;
+        width: 10rem;
+        border: none;
+        border-radius: 2rem;
+        font-size: 1rem;
+        color: white;
+        align-self: center;
+        background: #A9B972;
+        box-shadow:  5px 5px 6px #dadae0, 
+                    -5px -5px 6px #ffffff;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+/*     
+    .admin-login-btn,
+    .admin-login-enroll-btn{
+    height: 2.5rem;
+    width: 6.5rem;
+    border: none;
+    border-radius: 1rem;
+    font-size: .8rem;
+  } */
+  
+  }
