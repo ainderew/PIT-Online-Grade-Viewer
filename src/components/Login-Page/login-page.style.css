@@ -208,7 +208,7 @@
 
   .student-login-container{
     width: 90% !important;
-    /* min-height: 50% !important; */
+    min-height: 333px !important;
   }
   .student-login-logo{
     width: 7rem !important;
