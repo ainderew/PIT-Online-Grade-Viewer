@@ -1,7 +1,7 @@
 .submit-grade-screen{
     display: grid;
     grid-template-rows: 1fr 8fr;
-    height: 100vh;
+    height: 100%;
     /* border: 1px solid red; */
 }
 .submit-grade-screen-row1{
@@ -74,7 +74,7 @@
 
 @media only screen and (max-width: 600px){
     .submit-grade-screen{
-
+        height: 100vh;
         grid-template-rows: 10rem 8fr;
         background: #F8F8FF;
         box-shadow:  -5px -5px 10px #d9d9d9, 

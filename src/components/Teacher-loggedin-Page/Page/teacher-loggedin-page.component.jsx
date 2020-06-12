@@ -8,18 +8,25 @@ import {SubmitGrade} from "../teacher-loggedin-submit-grades/Page/teacher-logged
 import { useSelector,useDispatch } from "react-redux";
 import {teacherSubject} from "../../../actions"
 
+import HomeSVG from "../../../assets/home.svg"
+import TeacherSVG from "../../../assets/teacher.svg"
+import ScheduleSVG from "../../../assets/schedule.svg"
+
+
 
 export const TeacherLoggedInPage = () =>{
     const userInfo = useSelector(state => state.logInfoReducer)
     const dispatch = useDispatch();
     const [navigationData] = useState([
         {
+            linkIcon: HomeSVG,
             linkName: "Home",
             linkAddress: "/teacherLoggedin",
             linkSubMenu: false,
             
         },
         {
+            linkIcon: TeacherSVG,
             linkName: "Teacher",
             linkSubMenu: true,
             subMenuLi: [
@@ -34,6 +41,12 @@ export const TeacherLoggedInPage = () =>{
                     
                 }
             ]
+        },
+        {
+            linkIcon: ScheduleSVG,
+            linkName: "Schedule",
+            // linkAddress: "",
+            linkSubMenu: false
         },
         {
             linkName: "Enrollment",

@@ -10,6 +10,7 @@ import {LoggedInHomePage} from "../../Loggedin-Home-Page/loggedin-home-page.comp
 import HomeSvg from "../../../assets/home.svg"
 import StudentSvg from "../../../assets/student.svg"
 import SubjectsSvg from "../../../assets/subjects.svg"
+import ScheduleSvg from "../../../assets/schedule.svg"
 
 export const LoggedInPage = () =>{
     const userInfo = useSelector(state => state.logInfoReducer)
@@ -40,6 +41,12 @@ export const LoggedInPage = () =>{
                     
                 }
             ]
+        },
+        {
+            linkIcon: ScheduleSvg,
+            linkName: "Schedule",
+            // linkAddress: "",
+            linkSubMenu: false
         },
         {
             linkIcon: SubjectsSvg,
