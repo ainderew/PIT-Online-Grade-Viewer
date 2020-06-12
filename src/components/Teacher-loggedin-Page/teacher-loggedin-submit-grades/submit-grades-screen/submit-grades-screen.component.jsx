@@ -66,7 +66,7 @@ export const SubmitGradeScreen = (props) =>{
                         
                     </li>
                     {props.subjectData.students.map((student,index) =>{
-                        // if (index%2 === 0){
+                        
                             return <li key={index} className="submit-grade-li">
                             <div className="submit-grade-li-div">
                                 <div className="submit-grade-li-div-name">

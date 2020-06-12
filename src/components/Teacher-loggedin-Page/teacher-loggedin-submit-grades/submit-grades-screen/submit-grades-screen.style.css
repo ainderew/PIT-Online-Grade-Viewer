@@ -1,6 +1,7 @@
 .submit-grade-screen{
     display: grid;
     grid-template-rows: 1fr 8fr;
+    height: 100vh;
     /* border: 1px solid red; */
 }
 .submit-grade-screen-row1{
@@ -45,6 +46,7 @@
     display: grid;
     grid-template-columns: 1.5fr 1fr 1fr 1fr;
     height: 2.7rem;
+    
 }
 
 .submit-grade-li-div-idNumber,
@@ -68,4 +70,27 @@
 }
 .submit-grade-submit-btn-svg{
     width: 1.4rem;
+}
+
+@media only screen and (max-width: 600px){
+    .submit-grade-screen{
+
+        grid-template-rows: 10rem 8fr;
+        background: #F8F8FF;
+        box-shadow:  -5px -5px 10px #d9d9d9, 
+        5px 5px 10px #ffffff;
+ 
+    }
+    .submit-grade-screen-row1{
+        align-items: center;
+    }
+    .submit-grade-li-div{
+        padding: 0 1rem;
+    }
+    .submit-grade-li-div{
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 4rem;
+        background-color: #F8F8FF;
+    }
 }

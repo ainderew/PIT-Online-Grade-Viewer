@@ -1,7 +1,10 @@
 import React from "react";
 import "./confirmation-module.style.css";
+import {useHistory} from "react-router-dom"
 
 export const ConfirmationModule = (props) =>{
+    const history = useHistory();
+
     let ID_NUMBER = props.UserData.idNumber
     if (props.IdParser){
         let holder =[];
@@ -11,6 +14,36 @@ export const ConfirmationModule = (props) =>{
          ID_NUMBER= holder.join("")
        
     }
+
+    const confirmForm = async (e) =>{
+        e.preventDefault();
+        const dataObj = {
+            name: props.UserData.name,
+            idNumber: props.UserData.idNumber,
+            course: props.UserData.course,
+            yearLevel: props.UserData.yearLevel,
+            email: props.UserData.email,
+            phone: props.UserData.phoneNumber
+        }
+        console.log(dataObj)
+        // https://online-grade-viewer-api.herokuapp.com/createStudent/enrollmentForm
+        await fetch("https://online-grade-viewer-api.herokuapp.com/createStudent/enrollmentForm",{
+            method: "POST",
+            mode: "cors",
+            headers:{
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify(dataObj)
+        })
+        .then( response => response.json())
+        .then( data => {
+            if (data === "student enrolled"){
+                history.push("/")
+            }
+        })
+
+    }
+
     
   
     
@@ -48,7 +81,7 @@ export const ConfirmationModule = (props) =>{
             </div>
            <div className="confirmation-module-btn-container">
                <button className="confirmation-module-adjust-btn" onClick={props.ToggleOffModule}>Go Back</button>
-               <button className="confirmation-module-confirm-btn">Confirm</button>
+               <button className="confirmation-module-confirm-btn" onClick={confirmForm}>Confirm</button>
            </div>
             
         </div>

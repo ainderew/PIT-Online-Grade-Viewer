@@ -1,7 +1,6 @@
 import React, {useState,useEffect} from "react"
 import "./login-page.style.css"
 import PitLogo from "../../assets/PitLogo.png"
-import UserLogo from "../../assets/user.svg"
 import {useHistory} from  "react-router-dom"
 import {useDispatch} from "react-redux"
 import {login} from "../../actions"
@@ -87,7 +86,7 @@ export const LoginPage = () =>{
                     </div>
                     {loginErrorIndicator}
                     <div className="student-login-btn-conainter">
-                        <button className="student-login-enroll-btn" onClick={enrollmentBtn}>Enrollment Form</button>
+                        <button type="button" className="student-login-enroll-btn" onClick={enrollmentBtn}>Enrollment Form</button>
                         {button}
                     </div>
                 </form>

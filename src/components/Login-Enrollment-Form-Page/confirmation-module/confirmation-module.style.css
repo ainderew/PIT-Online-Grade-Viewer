@@ -98,3 +98,9 @@
     /* border-radius: 2rem; */
     color: rgb(131, 131, 131);
 }
+
+@media only screen and (min-width: 1280px){
+    .confirmation-module{
+        width: 40%;
+    }
+}

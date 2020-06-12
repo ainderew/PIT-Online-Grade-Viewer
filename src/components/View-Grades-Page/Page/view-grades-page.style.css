@@ -1,9 +1,8 @@
 .view-grades-page{
   height: 100%;
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid green;
 }

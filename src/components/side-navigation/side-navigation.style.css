@@ -9,7 +9,7 @@
              -5px -5px 10px #ffffff;
     position: sticky;
     top: 0;
-    z-index: 3;
+    z-index: 99;
 }
 .sec{
     padding: 0 2rem;
@@ -41,6 +41,11 @@
 .sidenav-pit-logo-text{
     font-size: 1rem;
 }
+
+/* .logout{
+    width: 100%;
+    margin-top: 2rem;
+} */
 
 @media only screen and (max-width: 1600px){
     

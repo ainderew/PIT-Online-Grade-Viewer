@@ -72,3 +72,26 @@
     font-size: .9rem;
     
 }
+
+@media only screen and (max-width: 600px){
+    .subject-list-li-div{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        border-radius: 1rem;
+        background: #FEFEFE;
+        box-shadow:  5px 5px 14px #e0e0e0, 
+                 -5px -5px 14px #ffffff;
+        /* padding: 0 5rem; */
+        width: 15rem;
+        padding: 1rem 0 1rem 3rem;
+        transition: 300ms ease;
+        position: relative;
+    
+    }
+    .subject-list-active{
+        position: relative;
+        width: 17rem;
+        padding: 2rem 0 2rem 3rem;
+    }
+
+}

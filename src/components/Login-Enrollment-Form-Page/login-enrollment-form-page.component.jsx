@@ -5,11 +5,16 @@ import Question from "../../assets/question.svg"
 import {ConfirmationModule} from "./confirmation-module/confirmation-module.component"
 
 export const LoginEnrollment = () =>{
+    const [button,setButton] = useState(<button className="login-enrollment-code-btn" >Submit</button>  )
+    const changeToLoader = () =>{
+        setButton(<div className="lds-dual-ring-enrollment-code"></div>)
+    }
 
     const [code,setCode] = useState({
         Value: "",
         Status: "login-enrollment-code-form on"
     })
+
     const onChangeCodeValue = (e) =>{
         setCode({
             ...code,
@@ -17,7 +22,7 @@ export const LoginEnrollment = () =>{
         })
     }
 
-
+    
     const [formData, setFormData] = useState({
         Status: "login-enrollment-student-form off",
         name: "",
@@ -42,6 +47,7 @@ export const LoginEnrollment = () =>{
 
   
     const checkCode = async (e) =>{
+        changeToLoader()
         e.preventDefault();
         const bodyData={
             code: code.Value
@@ -56,6 +62,7 @@ export const LoginEnrollment = () =>{
         })
         .then(recieved => recieved.json())
         .then(data => {
+            console.log(data)
             if (data !== null){setCode({
                 ...code,
                 Status: "login-enrollment-code-form off"
@@ -68,7 +75,43 @@ export const LoginEnrollment = () =>{
         })
     }
 
+
+    const [classes, setClasses] = useState({
+        nameInput: "login-enrollment-input login-enrollment-fName",
+        idNumberInput: "login-enrollment-input login-enrollment-idNumber",
+        courseInput: "login-enrollment-input",
+        yearLevelInput: "login-enrollment-input"
+    })
+    
     const confirmation = () =>{
+       if (formData.name === ""){
+           setClasses({
+               ...classes,
+               nameInput: "login-enrollment-input login-enrollment-fName red"
+           })
+
+       }else if(formData.idNumber === ""){
+           setClasses({
+               ...classes,
+               idNumberInput: "login-enrollment-input login-enrollment-idNumber red",
+               nameInput: "login-enrollment-input login-enrollment-fName"
+           })
+       }else if(formData.course === ""){
+           setClasses({
+               ...classes,
+               courseInput: "login-enrollment-input red",
+               idNumberInput: "login-enrollment-input login-enrollment-idNumber",
+               nameInput: "login-enrollment-input login-enrollment-fName"
+           })
+       }else if(formData.yearLevel === ""){
+           setClasses({
+               ...classes,
+               yearLevelInput: "login-enrollment-input red",
+               courseInput: "login-enrollment-input",
+               idNumberInput: "login-enrollment-input login-enrollment-idNumber",
+               nameInput: "login-enrollment-input login-enrollment-fName"
+           })
+       }else{
         setConfirmationStatus({
             Status: "confirmation-module on",
             parseId: true
@@ -77,13 +120,15 @@ export const LoginEnrollment = () =>{
             ...formData,
             Status: "login-enrollment-student-form off"
         })
+        
+       }
     }
 
 
     const yearLevelSelector = () =>{
         if (formData.course === "Junior High School"){
             return (
-                <select className="login-enrollment-input" value={formData.yearLevel} onChange={(e)=>onChangeFormData("yearLevel",e)}>
+                <select required={true} className={classes.yearLevelInput} value={formData.yearLevel} onChange={(e)=>onChangeFormData("yearLevel",e)}>
                     <option value=""></option>
                     <option value="Grade 7">Grade 7</option>
                     <option value="Grade 8">Grade 8</option>
@@ -94,7 +139,7 @@ export const LoginEnrollment = () =>{
             
         }else if(formData.course === "Senior High School"){
             return (
-                <select className="login-enrollment-input" value={formData.yearLevel} onChange={(e)=>onChangeFormData("yearLevel",e)}>
+                <select required={true} className={classes.yearLevelInput} value={formData.yearLevel} onChange={(e)=>onChangeFormData("yearLevel",e)}>
                     <option value=""></option>
                     <option value="Grade 11">Grade 11</option>
                     <option value="Grade 12">Grade 12</option>
@@ -134,26 +179,28 @@ export const LoginEnrollment = () =>{
                 </div>
                 <div className="login-enrollment-code-input-div">
                     <label className="login-enrollment-label" htmlFor="">Enrollment Code</label>
-                    <input className="login-enrollment-input login-enrollment-code-input" type="text" value={code.Value} onChange={onChangeCodeValue    }/>
+                    <input required={true} className="login-enrollment-input login-enrollment-code-input" type="text" value={code.Value} onChange={onChangeCodeValue    }/>
                 </div>
-                <button className="login-enrollment-code-btn" >Submit</button>
+                {button}
+                {/* <button className="login-enrollment-code-btn" >Submit</button> */}
             </form>
 
+            {/* STUDENT FORM */}
             <form className={formData.Status}>
                <div className="login-enrollment-student-form-row1">
                    <div className="login-enrollment-code-input-div">
                        <label className="login-enrollment-label" htmlFor="">Name</label>
-                       <input className="login-enrollment-input login-enrollment-fName" type="text" value={formData.name} onChange={(e)=>onChangeFormData("name",e)} />
+                       <input required={true} className={classes.nameInput} type="text" value={formData.name} onChange={(e)=>onChangeFormData("name",e)} />
                    </div>
                    <div className="login-enrollment-code-input-div">
                        <label className="login-enrollment-label" htmlFor="">Id Number</label>
-                       <input className="login-enrollment-input login-enrollment-idNumber" type="number" value={formData.idNumber} onChange={(e)=>onChangeFormData("idNumber",e)}/>
+                       <input required={true} className={classes.idNumberInput} type="number" value={formData.idNumber} onChange={(e)=>onChangeFormData("idNumber",e)}/>
                    </div>
                </div>
                <div className="login-enrollment-student-form-row2">
                    <div className="login-enrollment-code-input-div">
                        <label className="login-enrollment-label" htmlFor="">Course</label>
-                       <select className="login-enrollment-input" value={formData.course} onChange={(e)=>onChangeFormData("course",e)}>
+                       <select required={true} className={classes.courseInput} value={formData.course} onChange={(e)=>onChangeFormData("course",e)}>
                            <option value=""></option>
                            <option value="Junior High School">Junior High School</option>
                            <option value="Senior High School">Senior High School</option>
@@ -169,13 +216,13 @@ export const LoginEnrollment = () =>{
                <div className="login-enrollment-student-form-row4">
                    <div className="login-enrollment-code-input-div">
                        <label className="login-enrollment-label" htmlFor="">Email</label>
-                       <input className="login-enrollment-input login-enrollment-email" type="text" value={formData.email} onChange={(e)=>onChangeFormData("email",e)}/>
+                       <input required={true} className="login-enrollment-input login-enrollment-email" type="text" value={formData.email} onChange={(e)=>onChangeFormData("email",e)}/>
                    </div>
                </div>
                <div className="login-enrollment-student-form-row5">
                    <div className="login-enrollment-code-input-div">
                        <label className="login-enrollment-label" htmlFor="">Contact Number</label>
-                       <input className="login-enrollment-input login-enrollment-phone" type="number" value={formData.phoneNumber} onChange={(e)=>onChangeFormData("phoneNumber",e)}/>
+                       <input required={true} className="login-enrollment-input login-enrollment-phone" type="number" value={formData.phoneNumber} onChange={(e)=>onChangeFormData("phoneNumber",e)}/>
                    </div>
                </div>
                <div className="login-enrollment-student-form-row6">

@@ -16,7 +16,12 @@ export const SideNavigation = (props) =>{
                 <SideNavUl navigationData={props.navigationData} />
             </div>
             <div className="sec-4 sec"><p>OPTIONS</p></div>
-            <div className="sec-5 sec"></div>
+            <div className="sec-5">
+                <ul className="nav-ul">
+                    <li className="nav-li"><a href="">Change Password</a></li>
+                    <li className="nav-li"><a href="/">Log Out</a></li>
+                </ul>
+            </div>
         </div>
     )
 }

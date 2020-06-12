@@ -7,6 +7,9 @@ import {UserHeader} from "../user-header/user-header.component"
 import {ViewGradesPage} from "../../View-Grades-Page/Page/view-grades-page.component"
 import {LoggedInHomePage} from "../../Loggedin-Home-Page/loggedin-home-page.component"
 
+import HomeSvg from "../../../assets/home.svg"
+import StudentSvg from "../../../assets/student.svg"
+import SubjectsSvg from "../../../assets/subjects.svg"
 
 export const LoggedInPage = () =>{
     const userInfo = useSelector(state => state.logInfoReducer)
@@ -15,12 +18,14 @@ export const LoggedInPage = () =>{
 
     const [navigationData] = useState([
         {
+            linkIcon: HomeSvg,
             linkName: "Home",
             linkAddress: "/loggedin",
             linkSubMenu: false,
             
         },
         {
+            linkIcon: StudentSvg,
             linkName: "Student",
             linkSubMenu: true,
             subMenuLi: [
@@ -37,6 +42,7 @@ export const LoggedInPage = () =>{
             ]
         },
         {
+            linkIcon: SubjectsSvg,
             linkName: "Enrollment",
             linkAddress: "",
             linkSubMenu: false
